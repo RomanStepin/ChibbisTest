@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/orange">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="#FFFFFF"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/restaurant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/restaurant_logo"
+            app:layout_constraintTop_toTopOf="@+id/restaurant_logo"
+            tools:text="Умырзая" />
+
+        <ImageView
+            android:id="@+id/restaurant_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/restaurant_ic_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/ic_like"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurant_logo"
+            app:layout_constraintStart_toStartOf="@+id/restaurant_specializations" />
+
+        <TextView
+            android:id="@+id/restaurant_specializations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/restaurant_ic_like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/restaurant_name"
+            app:layout_constraintTop_toBottomOf="@+id/restaurant_name"
+            tools:text="Виво Белый Кремль / Плов" />
+
+        <TextView
+            android:id="@+id/restaurant_positive_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurant_ic_like"
+            app:layout_constraintStart_toEndOf="@+id/restaurant_ic_like"
+            app:layout_constraintTop_toTopOf="@+id/restaurant_ic_like"
+            tools:text="98 %" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

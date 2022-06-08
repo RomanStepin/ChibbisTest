@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Chibbis Test</string>
+
+    <string name="about_restaurant">о ресторане</string>
+    <string name="total_reviews">отзывов всего</string>
+    <string name="search">Поиск</string>
+
+
+</resources>
