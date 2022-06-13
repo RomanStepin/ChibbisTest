@@ -10,16 +10,28 @@ import javax.inject.Inject
 class Repository @Inject constructor(private val restApi: RestApi) {
 
     suspend fun getRestaurants(query: String): List<Restaurant> {
-        return restApi.getRestaurants().filter {
-            it.Name.uppercase().contains(query.uppercase())
+        return try {
+            restApi.getRestaurants().filter {
+                it.Name.uppercase().contains(query.uppercase())
+            }
+        } catch (e: Exception) {
+            listOf()
         }
     }
 
     suspend fun getReviews(): List<Review> {
-        return restApi.getReviews()
+        return try {
+            restApi.getReviews()
+        } catch (e: Exception) {
+            listOf()
+        }
     }
 
     suspend fun getHits(): List<Hit> {
-        return restApi.getHits()
+        return try {
+            restApi.getHits()
+        } catch (e: Exception) {
+            listOf()
+        }
     }
 }
